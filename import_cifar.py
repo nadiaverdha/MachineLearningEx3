@@ -103,6 +103,21 @@ def show_sample(label_names, sample_nr=None, random_max=50000):
     plt.axis('off')
     plt.show()
 
+def label_prediction(arr, label_names):
+    """
+    function to write label names instead of encoded labels
+    :param arr: predicted values [7, 2, 4 ,8, 0]
+    :param label_names: list of label names in the correct order
+    :return: array with labels [deer, dog, ship, cat, airplane]
+    """
+
+    label_mapping = dict(zip(range(len(label_names)), label_names))
+    label_arr = [label_mapping[label] for label in arr]
+
+    return label_arr
+
+
+
 if __name__ == '__main__':
 
     X_train, y_train, X_test, y_test, label_names = load_train_test_data()
@@ -114,4 +129,4 @@ if __name__ == '__main__':
     X_test = X_test.astype('float') / 255
 
 
-    # show_sample(label_names=label_names, sample_nr=5000)
+    show_sample(label_names=label_names, sample_nr=5000)
