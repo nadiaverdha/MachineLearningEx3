@@ -1,9 +1,10 @@
-Baseline:
+##Baseline:
 
 For the sake of readability and due to many visualizations, the implementation of the traditional methods is saved in two separate notebooks for each dataset,namely `cifar.ipynb`and `monkey.ipynb`respectively. In addition, due to high computation time, for `cifar` dataset the mega histograms and kmeans models created using SIFT method are saved as `mega_histogram_train_10.txt`, `kmeans_model_10.pkl`, `mega_histogram_train_50.txt` and `kmeans_model_50.pkl`. Similarly for the `monkey`dataset, those files are saved as `kmeans_model_10_monkey.pkl` and `mega_histogram_train_10_monkey.txt`. 
 
 
-More advanced methods:
+
+##More advanced methods:
 
 tensorflow models:
 -	All trained models and histories are saved in the models directory for the datasets cifar and monkeys (both are dictionaries in the model dictionary)
